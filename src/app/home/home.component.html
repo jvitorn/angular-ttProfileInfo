@@ -1,0 +1,175 @@
+<div class="container-fluid">
+  <div class="row mt-5 mb-5">
+    <div class="col-md-8 offset-md-2 col-10">
+      <div class="row mb-3 animate__animated animate__pulse">
+        <div class="col-10">
+          <!-- onchange="mySearch(this.value)" -->
+          <label for="inputPassword2" class="visually-hidden">Search</label>
+          <input type="text" class="form-control" id="inputSearch" placeholder="Search...">
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn btn-primary mb-3">buscar</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-12 mb-4 animate__bounceIn">
+          <!-- onMouseOver="" onMouseOut="" -->
+          <div class="card shadow" id="01" (mouseover)="myStyle('01','#ff0','#ff0',false)"
+            (mouseout)="myStyle('01','false','#6c757d',false)">
+            <div class="card-body">
+              <div class="row p-3 mb-0">
+                <div class="col-8 text-end">
+                  <h6 class="card-title text-uppercase">TIO JÃO 🤍| LENDO KHR</h6>
+                  <h6 class="card-subtitle mb-2 text-muted">@JutsuOtaku</h6>
+                </div>
+                <div class="col-4">
+                  <img src="https://i.pinimg.com/736x/96/f4/75/96f475c9a13b8659333cc8cfdbb6218a.jpg"
+                    class="img-fluid rounded-circle" alt="...">
+                </div>
+              </div>
+              <div class="row mb-3 p-1">
+                <div class="col border-end">
+                  <h5 class="card-title mb-2">250</h5>
+                  <h6 class="card-subtitle mb2 text-muted">Follows</h6>
+                </div>
+                <div class="col">
+                  <h5 class="card-title mb-2">300</h5>
+                  <h6 class="card-subtitle mb2 text-muted">Following</h6>
+                </div>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-info btn-lg" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">Ver </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 animate__bounceIn">
+          <!--   -->
+          <div class="card shadow" id="02" (mouseover)="myStyle('02','#eb4034','#eb4034',false)"
+            (mouseout)="myStyle('02','false','#6c757d',false)">
+            <div class="card-body">
+              <div class="row p-3 mb-0">
+                <div class="col-8 text-end">
+                  <h6 class="card-title text-uppercase">Hel | 📖: amor ou algo assim</h6>
+                  <h6 class="card-subtitle mb-2 text-muted">@riddlerhreverse</h6>
+                </div>
+                <div class="col-4">
+                  <img src="https://pbs.twimg.com/profile_images/1477664132337913865/IAGN4hmS_400x400.jpg"
+                    class="img-fluid rounded-circle" alt="...">
+                </div>
+              </div>
+              <div class="row mb-3 p-1">
+                <div class="col border-end">
+                  <h5 class="card-title mb-2">250</h5>
+                  <h6 class="card-subtitle mb2 text-muted">Follows</h6>
+                </div>
+                <div class="col">
+                  <h5 class="card-title mb-2">300</h5>
+                  <h6 class="card-subtitle mb2 text-muted">Following</h6>
+                </div>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-info btn-lg" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">Ver </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- onMouseOver="myStyle('exampleModal','#eb4034','#eb4034',true)" (mouseout)=""  -->
+  <div class="modal-dialog modal-xl" (mouseover)="myStyle('exampleModal','#eb4034','#eb4034',true)"
+    (mouseout)="myStyle('exampleModal','false','#6c757d',true)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-light">
+        <div class="container">
+          <!-- <div class="row">
+            <div class="col-12">
+              <img src="https://pbs.twimg.com/profile_banners/1057951361810214914/1641137438/1500x500" class="img-fluid" alt="">
+            </div>
+          </div> -->
+          <!-- content -->
+          <div class="row mt-3">
+            <div class="col-md-12 col-12">
+              <div class="row">
+                <div class="col-md-8 col-12 text-end">
+                  <h6 class="fs-3 text-uppercase">Hel | 📖: amor ou algo assim</h6>
+                  <h6 class="mb-2 text-muted">@riddlerhreverse</h6>
+                  <p class="fw-light">Aqui vocẽ irá encontrar um conteúdo de anime e reclamações pessoais.</p>
+                  <!-- content off infomations -->
+                  <div class="row text-center">
+                    <div class="col-6 border-end">
+                      <i class="bi bi-geo-alt-fill"></i> 21y
+                    </div>
+                    <div class="col-6 text-end">
+                      <a href="#">instagram.com/jvitorn/</a>
+                      <i class="bi bi-link-45deg"></i>
+                    </div>
+                  </div>
+                  <div class="row mt-3 p-2">
+                    <div class="col-6 text-center border-end">
+                      <i class="bi bi-briefcase-fill"></i> Programador - Fotografo
+                    </div>
+                    <div class="col-6 text-end mb-1 border-end">
+                      Ele/Ela/Elu
+                      &nbsp;
+                      <i class="bi bi-person-circle"></i>
+                    </div>
+                    <div class="col-6 offset-4 text-center mb-1">
+                      <p class="fw-lighter"><i class="bi bi-calendar3"></i> Nascido em 10 de Dezembro </p>
+                    </div>
+                    <div class="col-12 text-center text-uppercase">
+                      <i class="bi bi-play-circle-fill"></i>
+                      &nbsp;
+                      <a class="link-info" href=""> jão - idiota</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                  <img src="https://pbs.twimg.com/profile_images/1477664132337913865/IAGN4hmS_400x400.jpg" width="50%"
+                    height="50%" class="img-fluid rounded-circle" alt="...">
+                </div>
+                <div class="row mt-3">
+                  <div class="col-6 text-center border-end border-dark">
+                    <h5 class="text-success"> <i class="bi bi-hand-thumbs-up-fill"></i> Likes </h5>
+                    <ul class="list-group list-group-flush fw-bold">
+                      <li class="list-group-item">An item</li>
+                      <li class="list-group-item">A second item</li>
+                      <li class="list-group-item">A third item</li>
+                      <li class="list-group-item">A fourth item</li>
+                      <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                  </div>
+                  <div class="col-6 text-center">
+                    <h5 class="text-danger"><i class="bi bi-hand-thumbs-down-fill text-danger"></i> Dislikes</h5>
+                    <ul class="list-group list-group-flush fw-bold">
+                      <li class="list-group-item">Preconceito</li>
+                      <li class="list-group-item">Homofobia</li>
+                      <li class="list-group-item">A third item</li>
+                      <li class="list-group-item">A fourth item</li>
+                      <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="close" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
