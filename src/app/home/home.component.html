@@ -1,18 +1,18 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row mt-5 mb-5">
-    <div class="col-md-8 offset-md-2 col-10">
-      <div class="row mb-3 animate__animated animate__pulse">
-        <div class="col-10">
+    <div class="col-md-10 col-12">
+      <div class="row mb-3 animate__animated animate__pulse animate__delay-2s">
+        <div class="col-9">
           <!-- onchange="mySearch(this.value)" -->
           <label for="inputPassword2" class="visually-hidden">Search</label>
           <input type="text" class="form-control" id="inputSearch" placeholder="Search...">
         </div>
         <div class="col-2">
-          <button type="submit" class="btn btn-primary mb-3">buscar</button>
+          <button type="submit" class="btn mb-3 btn-outline-primary">buscar</button>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-12 mb-4 animate__bounceIn">
+        <div class="col-md-4 col-12 mb-4 animate__bounceIn animate__delay-2s">
           <!-- onMouseOver="" onMouseOut="" -->
           <div class="card shadow" id="01" (mouseover)="myStyle('01','#ff0','#ff0',false)"
             (mouseout)="myStyle('01','false','#6c757d',false)">
@@ -44,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-12 animate__bounceIn">
+        <div class="col-md-4 col-12 animate__bounceIn animate__delay-2s">
           <!--   -->
           <div class="card shadow" id="02" (mouseover)="myStyle('02','#eb4034','#eb4034',false)"
             (mouseout)="myStyle('02','false','#6c757d',false)">
@@ -83,7 +83,6 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <!-- onMouseOver="myStyle('exampleModal','#eb4034','#eb4034',true)" (mouseout)=""  -->
   <div class="modal-dialog modal-xl" (mouseover)="myStyle('exampleModal','#eb4034','#eb4034',true)"
     (mouseout)="myStyle('exampleModal','false','#6c757d',true)">
     <div class="modal-content">
@@ -107,25 +106,25 @@
                   <h6 class="mb-2 text-muted">@riddlerhreverse</h6>
                   <p class="fw-light">Aqui vocẽ irá encontrar um conteúdo de anime e reclamações pessoais.</p>
                   <!-- content off infomations -->
-                  <div class="row text-center">
-                    <div class="col-6 border-end">
+                  <div class="row text-center text-info-modal">
+                    <div class="col-md-6 col-5 border-end">
                       <i class="bi bi-geo-alt-fill"></i> 21y
                     </div>
-                    <div class="col-6 text-end">
-                      <a href="#">instagram.com/jvitorn/</a>
+                    <div class="col-md-6 col-6 text-end text-break">
+                      <a href="#" class="text-reset fw-light">instagram.com/jvitorn/</a>
                       <i class="bi bi-link-45deg"></i>
                     </div>
                   </div>
                   <div class="row mt-3 p-2">
-                    <div class="col-6 text-center border-end">
+                    <div class="col-md-6 col-12 mb-3 text-center border-end text-muted">
                       <i class="bi bi-briefcase-fill"></i> Programador - Fotografo
                     </div>
-                    <div class="col-6 text-end mb-1 border-end">
-                      Ele/Ela/Elu
+                    <div class="col-md-6 col-12 text-center mb-3 border-end">
+                      Ele/Ela
                       &nbsp;
                       <i class="bi bi-person-circle"></i>
                     </div>
-                    <div class="col-6 offset-4 text-center mb-1">
+                    <div class="col-md-6 offset-md-4 col-12 text-center mb-1">
                       <p class="fw-lighter"><i class="bi bi-calendar3"></i> Nascido em 10 de Dezembro </p>
                     </div>
                     <div class="col-12 text-center text-uppercase">
