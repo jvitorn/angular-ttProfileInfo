@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HomeService } from '../services/home.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() {
+  
+  constructor(private HomeService: HomeService) {
   }
+  
   // myStyle(id:string,border:string,color:string,icon:boolean) {
   //   this.cardEdit = document.getElementById(id) as HTMLElement;
   //   let r = true;
@@ -52,6 +53,12 @@ export class HomeComponent implements OnInit {
     }
   }
   ngOnInit(): void {
+    this.listarTodosProdutos()
   }
+
+  listarTodosProdutos() : void {
+    this.HomeService.listarTodosProdutos().subscribe(test => alert(test));
+  }
+  
 
 }
