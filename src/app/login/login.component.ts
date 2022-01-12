@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ComunService } from '../services/comun.service';
+
 
 @Component({
   selector: 'app-login',
@@ -8,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   pass:any;
   name:any;
-  constructor() { }
+  constructor(private ComunService: ComunService) { }
   ngOnInit(): void {
   }
 
   onSubmit(f:any) {
-   console.error('testando retorno do form',f.form);
+    this.ComunService.logar(f.form.value).subscribe((logServer) => {
+      const { auth, token} = logServer;
+    });
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from '../services/home.service';
+import { ComunService } from '../services/comun.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { HomeService } from '../services/home.service';
 })
 export class HomeComponent implements OnInit {
   
-  constructor(private HomeService: HomeService) {
+  constructor(private ComunService: ComunService) {
   }
   
   // myStyle(id:string,border:string,color:string,icon:boolean) {
@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
   }
 
   listarTodosProdutos() : void {
-    this.HomeService.listarTodosProdutos().subscribe(test => alert(test));
+    this.ComunService.listarTodosProdutos().subscribe(test => alert(test));
   }
   
 
