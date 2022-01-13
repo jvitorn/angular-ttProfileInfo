@@ -1,0 +1,51 @@
+<div class="container mb-3 mt-5 rounded text-dark">
+
+  <div class="row mt-5 mb-5">
+    <div class="col-md-10 col-12">
+      <div class="row mb-3 animate__animated animate__pulse animate__delay-2s">
+        <div class="col-9">
+          <!-- onchange="mySearch(this.value)" -->
+          <label for="inputPassword2" class="visually-hidden">Search</label>
+          <input type="text" class="form-control" id="inputSearch" placeholder="Search...">
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn mb-3 btn-outline-primary">buscar</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-12 mb-4 animate__bounceIn animate__delay-2s" *ngFor='let profile of profiles;'>
+          <!-- onMouseOver="" onMouseOut="" -->
+          <div class="card shadow" id="{{profile._id}}" (mouseover)="myStyle(profile._id,'#ff0','#ff0',false)"
+            (mouseout)="myStyle(profile._id,'false','#6c757d',false)">
+            <div class="card-body">
+              <div class="row p-3 mb-0">
+                <div class="col-8 text-end">
+                  <h6 class="card-title text-uppercase fs-6">{{profile.title}}</h6>
+                  <h6 class="card-subtitle mb-2 text-muted">@{{profile.username}}</h6>
+                </div>
+                <div class="col-4">
+                  <img src="{{profile.img}}"
+                    class="rounded-circle" alt="...">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col border-end">
+                  <h5 class="card-title mb-2">{{profile.followers}}</h5>
+                  <h6 class="card-subtitle mb2 text-muted">Follows</h6>
+                </div>
+                <div class="col">
+                  <h5 class="card-title mb-2">{{profile.friends}}</h5>
+                  <h6 class="card-subtitle mb2 text-muted">Following</h6>
+                </div>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-info btn-lg" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">Ver </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

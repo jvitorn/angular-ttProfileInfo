@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ComunService } from '../services/comun.service';
+import { StorageLocalService } from '../../services/storage-local.service';
+import { ComunService } from 'src/app/services/comun.service';
 
 @Component({
   selector: 'app-home',
@@ -7,26 +8,9 @@ import { ComunService } from '../services/comun.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
-  constructor(private ComunService: ComunService) {
+  profiles?:any
+  constructor(private StorageLocalService: StorageLocalService,private ComunService: ComunService) {
   }
-  
-  // myStyle(id:string,border:string,color:string,icon:boolean) {
-  //   this.cardEdit = document.getElementById(id) as HTMLElement;
-  //   let r = true;
-  //   let c = card.getElementsByClassName('card-title-twitter');
-  //   if(!border) {
-  //     r = false;
-  //     border = 'rgba(0,0,0,.125)';
-  //     c = card.getElementsByTagName("h6");
-  //   }
-  //   if(icon) {
-  //     let icons = card.getElementsByClassName("bi");
-  //     changeColor(icons,color,false,true);
-  //   }
-  //   card.style.borderColor = border ;
-  //   return changeColor(c,color,r,false);
-  // }
   
   myStyle(id:string, border:string , color:string, icon:boolean) : void {
     const card = document.getElementById(id);
@@ -53,12 +37,15 @@ export class HomeComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    this.listarTodosProdutos()
+    this.StorageLocalService.redirectToLogin();
+    this.ComunService.listarTodosProfiles().subscribe(s => {
+      const {profile} = s
+      this.profiles = profile;
+    },
+      e => {
+        console.error('erro',e)
+      }
+    );
   }
-
-  listarTodosProdutos() : void {
-    this.ComunService.listarTodosProdutos().subscribe(test => alert(test));
-  }
-  
 
 }
