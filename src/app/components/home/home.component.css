@@ -1,6 +1,26 @@
+:root {
+  --orange500:#fd7e14;
+}
+
 .text-info-modal {
   font-size: small;
 }
 .card-title.text-uppercase.fs-6 {
   font-size: 0.90rem!important;
+}
+h6.card-subtitle.mb2.text-muted {
+  color: #fd7e14!important;
+}
+.username-text {
+  color: #653208!important;
+}
+
+.btn-outline-orange{
+  color: #fd7e14;
+    border-color: #fd7e14;
+}
+.btn-orange{
+  color: rgb(255, 255, 255);
+    background-color: #fd7e14;
+    border-color: #fd7e14;
 }
