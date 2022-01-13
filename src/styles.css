@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.username-text {
+  color: #653208!important;
+}
+
+.btn-outline-orange {
+  color: #fd7e14!important;
+    border-color: #fd7e14!important;
+}
+.btn-orange {
+  color: rgb(255, 255, 255)!important;
+    background-color: #fd7e14!important;
+    border-color: #fd7e14!important;
+}
