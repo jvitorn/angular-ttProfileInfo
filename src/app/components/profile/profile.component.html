@@ -1,1 +1,96 @@
 <!-- https://cdn.dribbble.com/users/7142728/screenshots/15628643/media/4521c941397fcb8d5d13626d6bf2ce44.jpeg?compress=1&resize=1200x900&vertical=top -->
+<section class="row p-4">
+  <div class="col-4 text-orange animate__animated animate__fadeInTopLeft" (click)="backToPage()">
+    <h1 class="">&nbsp;<i class="bi bi-arrow-left-circle fs-1 text-start"></i></h1>
+  </div>
+  <div class="col-4 justify-content-center animate__animated animate__fadeInDownBig">
+    <div class="w-50 mx-auto d-block" >
+      <img src="https://pa1.narvii.com/6744/5379b8b403828fe86852fcded8111e409762477a_hq.gif" class="img-fluid" alt="">
+    </div>
+  </div>
+  <div class="col-4 text-white animate__animated animate__fadeInTopRight" (click)="backToLogin()">
+    <h1 class="text-end"><i class="bi bi-x-circle"></i></h1>
+  </div>
+</section>
+<section class="row">
+  <!-- image profile and username -->
+  <div class="col-md-12 justify-content-center">
+    <div class="row">
+      <div class="col-6 offset-3 mb-2">
+        <img src="{{profile.img}}"
+          class="rounded-circle p-2 mx-auto d-block border-orange" lt="...">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-12 text-center">
+        <h2 class="text-capitalize">{{profile.title}}</h2>
+        <span *ngIf="profile.professions.length > 0" class="text-muted fw-bold"> 
+          <i class="bi bi-briefcase-fill"></i>
+          <span *ngFor='let profession of profile.professions' >  
+            {{profession}} - 
+          </span>
+        </span>
+        <br *ngIf="profile.professions.length > 0">
+        <span class="text-orange animate__animated animate__fadeInUp">
+          @{{profile.username}}
+          <span class="text-muted text-lowercase" *ngFor='let pronoun of profile.pronouns'>
+            ({{pronoun}})
+          </span>
+        </span>
+        <br *ngIf="profile.location">
+        <br *ngIf="profile.location">
+        <span *ngIf="profile.location" class="text-muted fw-bold animate__animated animate__animated animate__delay-2s"> 
+          <i class="bi bi-geo-alt-fill"></i>
+          {{profile.location}}
+        </span>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col text-center">
+        <p class="text-muted text-break animate__animated animate__animated animate__delay-2s">
+          {{profile.bio}}
+        </p>
+      </div>
+    </div>
+    <!-- seguidores -->
+    <div class="row mb-5 text-center">
+      <div class="col border-end">
+        <h5 class="card-title mb-2" style="--from: 0; --to: {{profile.followers}}; --duration: 3s;"></h5>
+        <h6 class="card-subtitle mb2 text-orange  animate__animated animate__fadeInUp">Seguidores</h6>
+      </div>
+      <div class="col">
+        <h5 class="card-title mb-2" style="--from: 0; --to: {{profile.friends}}; --duration: 3s;"></h5>
+        <h6 class="card-subtitle mb2 text-orange  animate__animated animate__fadeInUp">Seguindo</h6>
+      </div>
+    </div>
+    <!-- likes and dislikes -->
+    <div class="row mb-3">
+      <div class="col-9 offset-1 justify-content-center">
+        <div class="row">
+          <div class="col-3 offset-2 p-3 rounded border border-success text-success animate__animated animate__pulse">
+            <img src="https://media0.giphy.com/media/kwHJyJkrAoAIE/giphy.gif?cid=790b7611d156e16c0b77e7a928de0a60aa7b2bceea371451&amp;rid=giphy.gif&amp;ct=s"
+              class="mx-auto d-block img-fluid animate__animated animate__pulse" alt="...">
+          </div>
+          <div class="col-3 offset-4 p-3 rounded border border-danger animate__animated animate__pulse">
+            <img src="https://thumbs.gfycat.com/UnrealisticPowerfulGuanaco-size_restricted.gif"
+              class="mx-auto d-block img-fluid animate__animated animate__pulse" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row p-3">
+      <div class="col border-end text-center text-success animate__animated animate__fadeInUp" >
+        <ul class="list-unstyled" *ngFor='let like of profile.preferences.likes'>
+          <li class="animate__animated animate__fadeInTopLeft">{{like}}</li>
+        </ul>
+      </div>
+      <div class="col  text-center text-danger">
+        <ul class="list-unstyled" *ngFor='let dislike of profile.preferences.dislikes'>
+          <li class="animate__animated animate__fadeInTopRight">{{dislike}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ 
+  
+</section>

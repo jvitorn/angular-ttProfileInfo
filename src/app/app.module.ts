@@ -26,6 +26,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent},
       { path: 'login', component: LoginComponent },
+      { path: 'profile/:id', component: ProfileComponent },
       { path: '', redirectTo: '/login', pathMatch: 'full' },
     ])
   ],

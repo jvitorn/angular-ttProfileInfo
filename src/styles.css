@@ -5,10 +5,16 @@
 
 .btn-outline-orange {
   color: #fd7e14!important;
-    border-color: #fd7e14!important;
+  border-color: #fd7e14!important;
 }
 .btn-orange {
   color: rgb(255, 255, 255)!important;
-    background-color: #fd7e14!important;
-    border-color: #fd7e14!important;
+  background-color: #fd7e14!important;
+  border-color: #fd7e14!important;
+}
+.border-orange {
+  border: 1px solid #fd7e14!important;
+}
+.text-orange {
+  color: #fd7e14!important;
 }

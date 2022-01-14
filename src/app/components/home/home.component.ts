@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageLocalService } from '../../services/storage-local.service';
 import { ComunService } from 'src/app/services/comun.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,13 @@ import { ComunService } from 'src/app/services/comun.service';
 })
 export class HomeComponent implements OnInit {
   profiles?:any
-  constructor(private StorageLocalService: StorageLocalService,private ComunService: ComunService) {
+  constructor(private router: Router,private StorageLocalService: StorageLocalService,private ComunService: ComunService) {
   }
-  
+  verProfile(id:any) {
+    this.router.navigate([`/profile/${id}`])
+    console.error('passando id',id)
+    //this.router.navigate(['/profile'],id);
+  }
   myStyle(id:string, border:string , color:string, icon:boolean) : void {
     const card = document.getElementById(id);
     let r = true;

@@ -17,7 +17,11 @@ export class ComunService {
     const header = new HttpHeaders({'x-access-token': token,'Content-Type':'application/json; charset=utf-8'});
     return this.http.get(`${this.apiHttp$}/profile/`, { headers:  header});
   }
-  
+  listarProfileUnico(id:String) : Observable <any> {
+    const token = this.token = this.StorageLocalService.get('token');
+    const header = new HttpHeaders({'x-access-token': token,'Content-Type':'application/json; charset=utf-8'});
+    return this.http.get(`${this.apiHttp$}/profile/${id}`, { headers:  header});
+  }
   logar(login:any) : Observable <any> {
     return this.http.post(`${this.apiHttp$}/login`,login);
   }

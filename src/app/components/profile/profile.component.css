@@ -1,0 +1,30 @@
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.sec-dark{
+  background-color:hsl(0deg 0% 17%);
+}
+.rounded {
+  border-radius: 1.5rem!important;
+}
+
+
+h5.card-title.mb-2 {
+  animation: counter var(--duration) forwards var(--timing, linear);
+  counter-reset: num var(--num);
+}
+h5.card-title.mb-2::before {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: var(--from);
+  }
+  to {
+    --num: var(--to);
+  }
+}
